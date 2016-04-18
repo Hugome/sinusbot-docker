@@ -21,4 +21,4 @@ RUN chmod 755 sinusbot
 ADD config.ini config.ini
 EXPOSE 8087
 VOLUME "/sinusbot/data"
-RUN ./sinusbot -RunningAsRootIsEvilAndIKnowThat
+CMD ./sinusbot -RunningAsRootIsEvilAndIKnowThat
