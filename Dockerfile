@@ -3,7 +3,7 @@ FROM ubuntu
 RUN apt-get update
 RUN apt-get install -y x11vnc xvfb libxcursor1 ca-certificates bzip2 libglib2.0-0 libquazip-dev wget
 RUN update-ca-certificates
-RUN useradd sinusbot
+RUN useradd -u 3000 sinusbot
 RUN mkdir -p /sinusbot /sinusbot/TeamSpeak3-Client-linux_amd64/
 RUN chown -R sinusbot:sinusbot /sinusbot
 USER sinusbot
