@@ -20,5 +20,5 @@ RUN cp plugin/libsoundbot_plugin.so TeamSpeak3-Client-linux_amd64/plugins
 RUN chmod 755 sinusbot
 ADD config.ini config.ini
 EXPOSE 8087
-VOLUME ["/sinusbot/config.ini", "/sinusbot/data"]
+VOLUME "/sinusbot/data"
 RUN ./sinusbot -RunningAsRootIsEvilAndIKnowThat
