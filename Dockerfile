@@ -2,6 +2,7 @@ FROM ubuntu:15.10
 
 ENV SINUSBOT_VERSION 0.9.12.3-36fce3c
 ENV TS3_VERSION 3.0.19.4
+ENV YOUTUBEDL_VERSION 2016.08.22
 
 RUN apt-get update
 RUN apt-get install -y x11vnc xvfb libxcursor1 ca-certificates bzip2 libglib2.0-0 libquazip-dev wget python
@@ -10,7 +11,7 @@ RUN useradd -u 3000 sinusbot
 RUN mkdir -p /sinusbot /sinusbot/TeamSpeak3-Client-linux_amd64/
 RUN chown -R sinusbot:sinusbot /sinusbot
 
-RUN wget -q -O /usr/local/bin/youtube-dl https://yt-dl.org/latest/youtube-dl
+RUN wget -q -O /usr/local/bin/youtube-dl https://github.com/rg3/youtube-dl/releases/download/$YOUTUBEDL_VERSION/youtube-dl
 RUN chmod 775 -f /usr/local/bin/youtube-dl
 
 USER sinusbot
