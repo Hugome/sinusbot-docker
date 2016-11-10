@@ -1,8 +1,8 @@
 FROM ubuntu:15.10
 
-ENV SINUSBOT_VERSION 0.9.12.3-36fce3c
+ENV SINUSBOT_VERSION 0.9.15-b20cc30
 ENV TS3_VERSION 3.0.19.4
-ENV YOUTUBEDL_VERSION 2016.08.22
+ENV YOUTUBEDL_VERSION 2016.11.08.1
 
 RUN apt-get update
 RUN apt-get install -y x11vnc xvfb libxcursor1 ca-certificates bzip2 libglib2.0-0 libquazip-dev wget python
